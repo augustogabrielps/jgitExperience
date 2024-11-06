@@ -14,11 +14,13 @@ public class HelloController {
 
     @Autowired
     public HelloController(HelloService helloService) {
+
         this.helloService = helloService;
     }
 
     @GetMapping("/hello")
     public String sayHello() {
+
         return helloService.getHelloMessage();
     }
 }
